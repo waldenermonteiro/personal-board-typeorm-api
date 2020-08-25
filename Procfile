@@ -1,2 +1,2 @@
-web: ts-node/server.ts
+web: nodemom server.ts
 api: typeorm migration:run
