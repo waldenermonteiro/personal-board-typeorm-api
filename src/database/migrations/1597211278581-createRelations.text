@@ -1,0 +1,17 @@
+import { MigrationInterface, QueryRunner } from 'typeorm'
+
+export class createRelations1597211278581 implements MigrationInterface {
+  public async up (queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.query('ALTER TABLE "tasks" ADD "frame_id" uuid')
+    await queryRunner.query(
+      'ALTER TABLE "tasks" ADD CONSTRAINT "FK_831240eaaa4a256aac0f878836c" FOREIGN KEY ("frame_id") REFERENCES "frames"("id") ON DELETE NO ACTION ON UPDATE NO ACTION'
+    )
+  }
+
+  public async down (queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.query(
+      'ALTER TABLE "tasks" DROP CONSTRAINT "FK_831240eaaa4a256aac0f878836c"'
+    )
+    await queryRunner.query('ALTER TABLE "tasks" DROP COLUMN "frame_id"')
+  }
+}
