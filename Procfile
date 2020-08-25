@@ -1,1 +1,1 @@
-web: ts-node/server.ts
+web: ENV_SILENT=true npm start
