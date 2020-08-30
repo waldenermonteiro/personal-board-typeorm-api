@@ -1,0 +1,17 @@
+{
+  "name": "default",
+  "type": "postgres",
+  "host": "ec2-54-144-177-189.compute-1.amazonaws.com",
+  "port": 5432,
+  "username": "wckyxprxmdfyfq",
+  "password": "fada8b1884a616311b74305a78f137257ce24206a39a2cf60faf6599c54ebb99",
+  "database": "ddvu7a7re9cemg",
+  "entities": ["src/models/*.ts"],
+  "migrations": ["src/database/migrations/*.ts"],
+  "logging": true,
+  "synchronize": true,
+  "ssl": false,
+  "extra": {
+    "rejectUnauthorized": false
+  }
+}
