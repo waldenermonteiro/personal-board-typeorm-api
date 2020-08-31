@@ -1,4 +1,7 @@
 {
+  "ts-node": {
+    "transpileOnly": true
+  },
   "compilerOptions": {
     "lib": ["es5", "es6", "dom"],
     "target": "ES5",
@@ -7,7 +10,7 @@
     "outDir": "dist",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
   },
 
   "include": ["src/**/*.ts", "src/app.ts", "server.ts"],
