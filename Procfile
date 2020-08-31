@@ -1,2 +1,2 @@
 web: ts-node server.ts
-api: typeorm migration:run
+api: npm run typeorm migration:run
