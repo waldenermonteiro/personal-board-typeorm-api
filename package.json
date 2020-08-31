@@ -9,7 +9,7 @@
     "start": "ts-node server.ts",
     "serve": "nodemon server.ts",
     "build": "sucrase ./src -d ./dist --transforms typescript,imports",
-    "typeorm": "TS_NODE_PROJECT=tsconfig.ts-node.json TS_NODE_TRANSPILE_ONLY=true ts-node ./node_modules/typeorm/cli.js"
+    "typeorm": "ts-node --project tsconfig.ts-node.json ./node_modules/typeorm/cli.js"
   },
   "keywords": [],
   "author": "",
