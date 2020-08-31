@@ -23,8 +23,8 @@ export default class Task {
   @ManyToOne((type) => Frame, (frame) => frame.tasks, {
     onDelete: 'CASCADE'
   })
-  @JoinColumn({ name: 'frame_id' })
-  frameId: Frame;
+  @JoinColumn({ name: 'frame_id', referencedColumnName: 'id' })
+  frame: Frame;
 
   @Column()
   frame_id: string;
