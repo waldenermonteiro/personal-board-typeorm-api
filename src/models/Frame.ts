@@ -17,6 +17,6 @@ export default class Frame {
   @Column()
   collocation: number;
 
-  @OneToMany((type) => Task, (task) => task.frame, { eager: false })
+  @OneToMany((type) => Task, (task) => task.frameId, { eager: false })
   tasks: Task[];
 }

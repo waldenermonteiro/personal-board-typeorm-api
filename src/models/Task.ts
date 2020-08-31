@@ -24,7 +24,7 @@ export default class Task {
     onDelete: 'CASCADE'
   })
   @JoinColumn({ name: 'frame_id' })
-  frame: Frame;
+  frameId: Frame;
 
   @Column()
   frame_id: string;
